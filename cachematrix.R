@@ -41,16 +41,5 @@ cacheSolve <- function(x, ...) {
     inversedMatrix <- solve(data, ...)
     message("setting the cached inversed matrix")
     x$setinverse(inversedMatrix)
-    return(inversedMatrix)
-}
-
-test = function(){
-    
-    mymatrix = replicate(3, rnorm(3))
-    
-    temp = makeCacheMatrix(mymatrix)
-    
-    cacheSolve(temp)
-    cacheSolve(temp)
-    
+    inversedMatrix
 }
